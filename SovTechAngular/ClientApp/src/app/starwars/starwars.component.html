@@ -1,0 +1,55 @@
+<div>
+  <label>People: </label>
+  <select (change)="onChangeEvent($event)" ng-model="filter" [(ngModel)]="filter">
+
+    <option value="0">--SELECT PERSON--</option>
+    <option *ngFor="let i of Name" value={{i}}>
+      {{i}}
+    </option>
+  </select>
+
+
+  <form>
+    <div>
+      <br />
+      <label>Name : </label>
+      <label>{{firstname}}</label>
+      <br />
+      <label>height : </label>
+      <label>{{height}}</label>
+      <br />
+      <label>mass : </label>
+      <label>{{mass}}</label>
+      <br />
+      <label>hair color : </label>
+      <label>{{hair_color}}</label>
+      <br />
+      <label>Eye Color : </label>
+      <label>{{eye_color}}</label>
+      <br />
+      <label>Birth year : </label>
+      <label>{{birth_year}}</label>
+      <br />
+      <label>gender : </label>
+      <label>{{gender}}</label>
+      <br />
+      <label>Skin Color : </label>
+      <label>{{skin_color}}</label>
+      <br />
+      birth_year
+      <ul *ngFor="let i of films">
+        <li>{{i}}</li>
+      </ul>
+      <br />
+      species
+      <ul *ngFor="let i of species">
+        <li>{{i}}</li>
+      </ul>
+      vehicles
+      <ul *ngFor="let i of vehicles">
+        <li>{{i}}</li>
+      </ul>
+    </div>
+  </form>
+</div>
+  

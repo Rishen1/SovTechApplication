@@ -1,0 +1,13 @@
+  <div>
+    <label>Joke Types: </label>
+    <select [ngModel]="filter" (change)="onChangeEvent($event.target.value)" ng-model="filter" [(ngModel)]="filter">
+      <option *ngFor="let i of Value" value={{i}}>
+        {{i}}
+      </option>
+    </select>
+    <p>
+      <br/>
+      {{joke}}
+    </p>
+  </div>
+
